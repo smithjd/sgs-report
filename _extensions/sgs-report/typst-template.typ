@@ -16,12 +16,12 @@
   date: none,
   abstract: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
+  margin: (x: 1in, y: 1in),
   paper: "us-letter",
   lang: "en",
   region: "US",
   font: (),
-  fontsize: 11pt,
+  fontsize: 13pt,
   sectionnumbering: none,
   toc: false,
   doc,
@@ -30,6 +30,14 @@
     paper: paper,
     margin: margin,
     numbering: "1",
+    // Configure the page properties.
+    background: place(
+    top,
+    rect (
+    width: 2cm,
+    height: 100%,
+    fill: rgb("#0D2C54" )
+    ),
   )
   set par(justify: true)
   set text(lang: lang,
@@ -87,3 +95,4 @@
     columns(cols, doc)
   }
 }
+
