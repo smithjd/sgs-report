@@ -9,7 +9,20 @@
 // documentation on creating typst templates and some examples here: 
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
+// Configure pages with custom margins and sidebar background
+#set page(
+  margin: (left: 2cm, right: 1.5cm, top: 2cm, bottom: 2cm),
+  background: place(right + top, rect(
+    fill: rgb("#E6E6FA"),
+    height: 100%,
+    width: 3cm,
+  ))
+)
 
+// Your existing template content continues here...
+#let doc(title: none, authors: (), body) = {
+  // ... rest of your template
+}
 #let article(
   title: none,
   authors: none,
@@ -30,14 +43,7 @@
     paper: paper,
     margin: margin,
     numbering: "1",
-    // Configure the page properties.
-    background: place(
-    top,
-    rect (
-    width: 2cm,
-    height: 100%,
-    fill: rgb("#0D2C54" )
-    ),
+    
   )
   set par(justify: true)
   set text(lang: lang,
