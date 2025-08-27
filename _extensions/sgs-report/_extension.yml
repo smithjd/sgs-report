@@ -6,6 +6,6 @@ contributes:
   formats:
     typst:
       template-partials:
-        - typst-template.typ
-        - typst-show.typ
+        - github/smithjd/typst-template.typ
+        - github/smithjd/typst-show.typ
 
